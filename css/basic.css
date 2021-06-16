@@ -103,6 +103,16 @@ nav > a.active {
     
 }
 
+.section{
+    background-color: lightpink;
+    font-size: medium; color: black;
+    text-align: center;
+   
+}
+
+
+
+
 /* nav > a:visited {
     color: rgba(7, 7, 7, 0.007); 
 } */

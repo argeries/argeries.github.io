@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+main {
+    margin: 1em 2%;
+    font-size: xx-large;
+    background-color: lavenderblush;
+    font-family: monospace;
+    text-align: center;
+}
+
+nav {
+    text-decoration: lightseagreen;
+    display: flexbox;
+    background-color: burlywood;
+    font-size: x-large;
+    font-family: cursive;
+    text-align: center;
+
+}
+
+nav > a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin-top: -4px;
+    text-align: center;
+}
+
+nav > a:hover {
+    background-color: darkgray; 
+    color: white;
+    text-align: center;
+}
+
+nav > a.active {
+    background-color: rgba(255, 255, 255, 0.37); 
+    text-align: center;
+}
+
+.results
+{
+    text-align: center;
+}
+
+.busqueda{
+    font-size: small;
+    text-align: center;
+}
+.canales {
+    color: coral;
+    font-size: medium;
+    text-align: center;
+}
+
+.contactos {
+    background-color: cadetblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    
+}
+
+.formulario
+{
+    background-color: aquamarine;
+    font-size: larger;
+    align-self: center;
+    text-align: center;
+}
+
+.detalle
+{
+    font-size: x-large;
+    color: darkolivegreen;
+    text-align: center;
+}
+
+.producto {
+    color: indigo;
+    background-color: lavender;
+    text-align: center;
+}
+
+.sitio
+{
+    background-color: beige;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.carrito
+{
+    text-align: center;
+}
+
+.button {
+    align-self: center;
+    text-align: center;
+   
+    
+}
+
+/* nav > a:visited {
+    color: rgba(7, 7, 7, 0.007); 
+} */

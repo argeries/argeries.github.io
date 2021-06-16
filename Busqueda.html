@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+         @import url(css/basic.css);
+    
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function (event) {
+            console.log('DOM is ready!');            
+
+           /* products.forEach(p => {
+                //console.log(p.productName);
+
+                const tr = document.createElement('tr');
+
+                // Como iterar por todas las propiedades de un objeto
+                // for(const prop in p)
+                // {
+                //     const td = document.createElement('td');
+                //     td.innerText = p[prop];
+                //     tr.appendChild(td);
+                // }
+
+                let td = document.createElement('td');
+                td.innerText = p.productName;
+                tr.appendChild(td);
+
+                td = document.createElement('td');
+                td.innerText = p.unitPrice;
+                tr.appendChild(td);
+
+                td = document.createElement('td');
+                td.innerText = p.quantityPerUnit;
+                tr.appendChild(td);
+
+                td = document.createElement('td');
+                td.innerText = p.categoryName;
+                tr.appendChild(td);
+
+                results.appendChild(tr);
+            });*/
+            bSearch.addEventListener('click', event =>{
+                    event.preventDefault();
+                    const filter = iFilter.value;
+                    console.log(`bSearch clicked! Searching ${filter}...`);
+                    
+                    results.innerHTML = '';
+
+                    products.forEach(p => {
+                        if (filter && p.productName.indexOf(filter) >= 0) {
+                            
+                            //console.log(p);
+                            const tr = document.createElement('tr'); 
+
+                            let td = document.createElement('td');
+                            td.innerText = p.productName;
+                            tr.appendChild(td);
+
+                            td = document.createElement('td');
+                            td.innerText = p.unitPrice;
+                            tr.appendChild(td);
+
+                            td = document.createElement('td');
+                            td.innerText = p.quantityPerUnit;
+                            tr.appendChild(td);
+
+                            td = document.createElement('td');
+                            td.innerText = p.categoryName;
+                            tr.appendChild(td);
+
+                            results.appendChild(tr);
+        
+                        }
+                        else {
+                            console.log('Not found!');
+                        }
+                    });
+
+
+        })
+        });        
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Busqueda.html" class="active">Busqueda</a>
+        <a href="Contacto.html">Contactenos</a>
+        <a href="Detalle.html">Detalle de Carrito</a>
+    </nav>
+    
+    <main class="main">
+        <section>
+            <form>
+                <label for="iFilter">Busqueda</label>
+                <input id="iFilter" type="search" placeholder="Busque su producto aqui..."/>
+                <button id="bSearch" >Buscar</button>
+            </form>
+        </section>    
+        <br>   
+        
+        <section class="results">
+           
+            <table align="center"  >
+                <caption align="center" >Resultados de Busqueda</caption>
+                <colgroup >
+                    <col span="1" align="center" >
+                </colgroup>
+            
+                <tbody id="results" align="center">
+                </tbody>
+            </table>
+        
+        </section>
+    
+    </main>
+    <script src="js/products.js"></script>
+</body>
+
+</html>
